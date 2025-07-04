@@ -49,11 +49,11 @@ a {
 }
 
 .fs_14{
-  font-size: var(--fs-sm);
+  font-size: var(--fs-sm) !important;
 }
 
 .fs_16{
-  font-size: var(--fs-md);
+  font-size: var(--fs-md) !important;
 }
 
 .fs_18{
@@ -91,6 +91,10 @@ a {
   background-color: var(--bg-darktheme);
 }
 
+.clr_lightwhite{
+  color: #F8F9FA !important;
+}
+
 .custom_selete{
   border: 1px solid #DBE5E3;background: #FFFFFF; border-radius: 8px;
   padding: 15px !important;
@@ -102,6 +106,35 @@ a {
   font-weight: 400;
 }
 
+.sidebar-link:hover {
+  background-color: #338499 !important;
+  border-radius: 8px;
+}
+
+.sidebar-link {
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+}
+
+.sidebar-link:hover {
+  background-color: #338499;
+  border-radius: 8px;
+}
+
+.sidebar-link.active-link {
+  background-color: #338499;
+  border-radius: 8px;
+}
+
+.input_box{
+  background-color: #E4F5F7;
+  border-radius: 8px;
+  padding: 5px 16px;
+}
+
+input{
+  outline: none !important;
+}
 
 @media (prefers-color-scheme: dark) {
   html {

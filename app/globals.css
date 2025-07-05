@@ -94,6 +94,9 @@ a {
 .clr_lightwhite{
   color: #F8F9FA !important;
 }
+.clr_lightblack{
+  color: #070808 !important;
+}
 
 .custom_selete{
   border: 1px solid #DBE5E3;background: #FFFFFF; border-radius: 8px;
@@ -130,10 +133,24 @@ a {
   background-color: #E4F5F7;
   border-radius: 8px;
   padding: 5px 16px;
+  max-width: 400px;
 }
 
 input{
   outline: none !important;
+}
+
+.detailCard{
+  box-shadow: 0px 8px 12px 0px #0000001A;
+
+}
+
+.offcanvas.offcanvas-end{
+  width: 250px !important;
+}
+
+.offcanvas.show:not(.hiding), .offcanvas.showing{
+  background-color: #006580 !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -141,3 +158,19 @@ input{
     color-scheme: dark;
   }
 }
+
+ .sidebarSpace{
+    margin-left: 250px !important;
+  }
+   .custom_w{
+    width: 172px !important;
+  }
+  @media (max-width:768px) {
+    .sidebarSpace{
+      margin-left: 0px !important;
+    }
+    .custom_w{
+    width: 100% !important;
+  }
+  }
+  

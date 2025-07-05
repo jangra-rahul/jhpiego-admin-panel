@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface CommonButtonProps {
@@ -7,8 +8,10 @@ interface CommonButtonProps {
   height?: string;
   backgroundColor?: string;
   fontSize?: string;
+  className?: string;
   fontWeight?: string ;
-  image?: string; // optional image src
+  image?: string;
+  style?: React.CSSProperties; 
   onClick?: () => void;
 }
 
@@ -21,10 +24,15 @@ const CommonButton: React.FC<CommonButtonProps> = ({
   backgroundColor = '#007bff',
   fontWeight="700",
   image,
+  style = {},
+
+  className = "",
+
   onClick,
 }) => {
   return (
     <button
+    className={`${className}`}
       onClick={onClick}
       style={{
         display: 'flex',
@@ -40,10 +48,11 @@ const CommonButton: React.FC<CommonButtonProps> = ({
         border: 'none',
         borderRadius: '8px',
         cursor: 'pointer',
-        padding: '8px 16px'
+        padding: '8px 16px',
+        ...style,
       }}
     >
-      {image && <img src={image} alt="icon" style={{ height: '20px', width: '20px' }} />}
+      {image && <Image src={image} alt="icon" style={{ height: '20px', width: '20px' }} />}
       {text}
     </button>
   );

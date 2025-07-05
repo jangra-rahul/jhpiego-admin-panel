@@ -4,6 +4,9 @@ import React from 'react'
 import { Col, Container, Row, Form, Button } from 'react-bootstrap'
 import logo from "../../../public/images/svg/loginLogo.svg"
 import CommonButton from '@/app/components/common/CommonButton'
+import CommonSelect from '@/app/components/common/CommonSelect'
+import CommonInput from '@/app/components/common/CommonInput'
+import Link from 'next/link'
 
 const page = () => {
   return (
@@ -22,30 +25,31 @@ const page = () => {
               <p className='text-center text-muted mb-4'>Please Log in to continue</p>
 
               <Form>
-                <Form.Group className='mb-4'>
-                  <Form.Label className='fw-medium fs_16 mb-0 clr_darkblack mb-2'>Log in as</Form.Label>
-                  <Form.Select className='custom_selete'>
-                    <option>Select your role</option>
-                    <option>Admin</option>
-                    <option>User</option>
-                  </Form.Select>
-                </Form.Group>
+                 <CommonSelect
+    label="Log in as"
+    options={["HR", "Employees"]}
+    placeholder = "Select your role"
+    // value={} onChange={} optional
+  />
 
-                <Form.Group className='mb-4'>
-                  <Form.Label className='fw-medium fs_16 mb-0 clr_darkblack mb-2'>Email Address</Form.Label>
-                  <Form.Control className='custom_selete' type='email' placeholder='Enter email address' />
-                </Form.Group>
+               <CommonInput
+    label="Email Address"
+    type="email"
+    placeholder="Enter email address"
+  />
 
-                <Form.Group className='mb-4'>
-                  <Form.Label className='fw-medium fs_16 mb-0 clr_darkblack mb-2'>Password</Form.Label>
-                  <Form.Control className='custom_selete' type='password' placeholder='Enter password' />
-                  <div className='text-end'>
-                    <a href='#' style={{textDecoration:"none"}} className='fs_14 fw-normal clr_theme mt-2 d-inline-block'>Forgot Password?</a>
+  <CommonInput
+    label="Password"
+    type="password"
+    placeholder="Enter password"
+  />
+
+
+                <div className='text-end'>
+                    <a href='#' style={{textDecoration:"none"}} className='fs_14 fw-normal clr_theme  d-inline-block'>Forgot Password?</a>
                   </div>
-                </Form.Group>
-
                 <div className='d-flex justify-content-center mt-4 mb-4'>
-                  <CommonButton
+                 <Link style={{textDecoration:"none"}} href={"/"}> <CommonButton
         text="Log in"
         color="#fff"
         width="172px"
@@ -54,7 +58,7 @@ const page = () => {
         fontWeight="700"
         backgroundColor="#00bcd4"
         // onClick={() => alert('Logged in!')}
-      />
+      /></Link>
                 </div>
               </Form>
 

@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 const page = () => {
   return (
-    <div className='bg_darkTheme min-vh-100 d-flex align-items-center'>
+    <div className='bg_darkTheme py-5 min-vh-100 d-flex align-items-center'>
       <Container>
         <Row className='justify-content-center' >
             <Col md={10}>
@@ -49,7 +49,7 @@ const page = () => {
                     <a href='#' style={{textDecoration:"none"}} className='fs_14 fw-normal clr_theme  d-inline-block'>Forgot Password?</a>
                   </div>
                 <div className='d-flex justify-content-center mt-4 mb-4'>
-                 <Link style={{textDecoration:"none"}} href={"/"}> <CommonButton
+                 <Link style={{textDecoration:"none"}} href={"/dashboard"}> <CommonButton
         text="Log in"
         color="#fff"
         width="172px"

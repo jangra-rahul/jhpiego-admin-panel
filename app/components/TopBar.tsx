@@ -7,6 +7,7 @@ import notifactionIcon from "../../public/images/svg/notifactionIcon.svg";
 import logo from "../logo.png";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function TopBar({ onToggleSidebar }: { onToggleSidebar?: () => void }) {
       const [showSearchMobile, setShowSearchMobile] = useState(false);
@@ -44,14 +45,18 @@ export default function TopBar({ onToggleSidebar }: { onToggleSidebar?: () => vo
             </div>
           </Col>
           <Col className="text-end d-flex justify-content-end ">
+        
 <div className="d-flex gap-md-4 gap-3 align-items-center">
     <div className="d-flex align-items-center gap-2 ">
     <div className="d-md-block d-none">
         <h5 className="fs_14 mb-0 clr_darkgray">Siddharth Rao</h5>
         <p className="fs_14 mb-0 clr_gray">HR Manager</p>
     </div>
+      <Link href={"/dashboard/employee-profile"}>
      <Image width={40} height={40} src={profilelogo} alt=" icon"/>
+     </Link>
 </div>
+
 <Image width={40} height={40} src={notifactionIcon} alt=" icon"/>
 
  <Col xs="auto" className="d-md-none pe-0">

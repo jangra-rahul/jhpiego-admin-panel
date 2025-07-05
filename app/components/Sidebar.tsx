@@ -4,10 +4,12 @@ import { Nav } from "react-bootstrap";
 import sidebarlogo from "../../public/images/svg/sidebarLogo.svg";
 import dashboardIcon from "../../public/images/svg/dashboardIcon.svg";
 import addEmployeesIcon from "../../public/images/svg/addemployeeIcon1.svg";
-import resumeIcon from "../../public/images/svg/resumeIcon.svg";
+import skillMappingIcon from "../../public/images/svg/skillMappingIcon.svg";
+import employeedirectoryIcon from "../../public/images/svg/employeedirectoryIcon.svg";
+import projectassignmentsIcon from "../../public/images/svg/projectassignmentsIcon.svg";
 import SettingsIcon from "../../public/images/svg/sattingIcon.svg";
 import HelpIcon from "../../public/images/svg/helpIcon.svg";
-import toolkitIcon from "../../public/images/svg/toolkitIcon.svg";
+import reportsIcon from "../../public/images/svg/reportsIcon.svg";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -20,10 +22,10 @@ export default function Sidebar({ show, handleClose }: { show: boolean; handleCl
   const topNavItems = [
     { label: "Dashboard", icon: dashboardIcon, href: "/dashboard" },
     { label: "Add Employee", icon: addEmployeesIcon, href: "/dashboard/add-employee" },
-    { label: "Employee Directory", icon: resumeIcon, href: "/employee-directory" },
-    { label: "Project Assignments", icon: toolkitIcon, href: "/project-assignments" },
-    { label: "Skill Mapping", icon: toolkitIcon, href: "/project-assignments" },
-    { label: "Reports & Exports", icon: toolkitIcon, href: "/project-assignments" },
+    { label: "Employee Directory", icon: employeedirectoryIcon, href: "/dashboard/employee-directory" },
+    { label: "Project Assignments", icon: projectassignmentsIcon, href: "/project-assignments" },
+    { label: "Skill Mapping", icon: skillMappingIcon, href: "/project-assignments" },
+    { label: "Reports & Exports", icon: reportsIcon, href: "/project-assignments" },
   ];
 
   const bottomNavItems = [

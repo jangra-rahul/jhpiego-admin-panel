@@ -10,6 +10,7 @@ interface CommonSelectProps {
   required?: boolean;
   name?: string;
   placeholder?: string; 
+  style?: React.CSSProperties; 
 }
 
 const CommonSelect: React.FC<CommonSelectProps> = ({
@@ -20,11 +21,12 @@ const CommonSelect: React.FC<CommonSelectProps> = ({
   required = false,
   placeholder = "Select an option",
   name,
+  style = {},
 }) => {
   return (
     <Form.Group className="mb-4">
       <Form.Label className="fw-medium fs_16 mb-0 clr_darkblack mb-2">{label}</Form.Label>
-      <Form.Select
+      <Form.Select style={{...style}}
         className="custom_selete"
         value={value}
         onChange={onChange}
